@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sky Weather App</title>
+    <script src="https://kit.fontawesome.com/53ca663091.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Aplicativo de Previsão do Tempo distribuída por Open Weather A P I</h1>
+      <section id="searchBar" class="searchBar">
+        <form action="" id="searchBar__form" class="searchBar__form" role="search">
+          <label for="searchBar__text">Insira uma localização</label>
+          <input
+            id="searchBar__text"
+            class="searchBar__text"
+            type="text"
+            role="searchbox"
+            size="40"
+            autocomplete="off"
+            placeholder="Cidade, Estado, País"
+          />
+          <button
+            id="searchBar__button"
+            class="searchBar__button"
+            title="Enviar Localização"
+            aria-label="Insira a Cidade, Estado, País ou CEP para saber a Previsão do Tempo"
+          >
+            <i class="fas fa-search"></i>
+            <i class="fas fa-sync fa-spin"></i>
+          </button>
+        </form>
+      </section>
+
+      <a href="#currentForecast" class="skip-link">Pular para Condição de Tempo Atual</a>
+      <section
+        id="currentForecast"
+        class="currentForecast"
+        role="region"
+        aria-labelledby="currentForecast__location"
+      >
+        <h2 id="currentForecast__location" class="currentForecast__location">Clima Atual</h2>
+        <div id="currentForecast__conditions" class="currentForecast__conditions"></div>
+      </section>
+
+      <a href="#dailyForecast" class="skip-link">Pular para Previsão de 6 Dias</a>
+      <nav id="navButtons" class="navButtons">
+        <button
+          id="getLocation"
+          class="button"
+          title="Pegar Localização Atual"
+          aria-label="Pega o Clima Atual para sua Localização Atual"
+        >
+          <i class="fas fa-map-marker-alt"></i>
+          <i class="fas fa-sync fa-spin"></i>
+        </button>
+        <button
+          id="home"
+          class="button"
+          title="Clima da sua Casa"
+          aria-label="Pega o Clima Atual para a Localização da sua Casa"
+        >
+          <i class="fas fa-home"></i>
+          <i class="fas fa-sync fa-spin"></i>
+        </button>
+        <button
+          id="saveLocation"
+          class="button"
+          title="Salvar Localização"
+          aria-label="Salva a Localização Atual como a Localização da sua Casa"
+        >
+          <i class="fas fa-bookmark"></i>
+          <i class="fas fa-sync fa-spin"></i>
+        </button>
+        <button
+          id="unit"
+          class="button"
+          title="Alternar Unidades de Medição"
+          aria-label="Alternar entre Celsius(Metrica) e Fahrenheit(Imperial)"
+        >
+          <i class="fas fa-thermometer-half"></i>
+          <i class="fas fa-sync fa-spin"></i>
+        </button>
+        <button
+          id="refresh"
+          class="button"
+          title="Recarregar Clima-Tempo"
+          aria-label="Recarrega as Condições de Tempo Atuais"
+        >
+          <i class="fas fa-sync-alt"></i>
+          <i class="fas fa-sync fa-spin"></i>
+        </button>
+      </nav>
+      <hr />
+      <section
+        class="dailyForecast"
+        id="dailyForecast"
+        role="region"
+        aria-labelledby="dailyForecast__title"
+      >
+        <h2 id="dailyForecast__title" class="dailyForecast__title">Previsão de 6 Dias</h2>
+        <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
+      </section>
+      <p id="confirmation" class="offscreen" aria-live="assertive"></p>
+    </main>
+  </body>
+</html>
