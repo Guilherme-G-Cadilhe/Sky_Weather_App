@@ -10,9 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/Guilherme-G-Cadilhe/Sky_Weather_App.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "API",
+    "Weather"
+  ],
+  "author": "Bobnini",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Guilherme-G-Cadilhe/Sky_Weather_App/issues"
   },
