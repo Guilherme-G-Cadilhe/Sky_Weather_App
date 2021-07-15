@@ -16,10 +16,12 @@
   </head>
   <body>
     <main>
-      <h1>Aplicativo de Previsão do Tempo distribuída por Open Weather A P I</h1>
+      <h1 class="offscreen">
+        Aplicativo de Previsão do Tempo criado com os recursos da Open Weather A P I
+      </h1>
       <section id="searchBar" class="searchBar">
         <form action="" id="searchBar__form" class="searchBar__form" role="search">
-          <label for="searchBar__text">Insira uma localização</label>
+          <label for="searchBar__text" class="offscreen">Insira uma localização</label>
           <input
             id="searchBar__text"
             class="searchBar__text"
@@ -36,7 +38,7 @@
             aria-label="Insira a Cidade, Estado, País ou CEP para saber a Previsão do Tempo"
           >
             <i class="fas fa-search"></i>
-            <i class="fas fa-sync fa-spin"></i>
+            <i class="fas fa-sync fa-spin none"></i>
           </button>
         </form>
       </section>
@@ -61,7 +63,7 @@
           aria-label="Pega o Clima Atual para sua Localização Atual"
         >
           <i class="fas fa-map-marker-alt"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
         <button
           id="home"
@@ -70,7 +72,7 @@
           aria-label="Pega o Clima Atual para a Localização da sua Casa"
         >
           <i class="fas fa-home"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
         <button
           id="saveLocation"
@@ -79,7 +81,7 @@
           aria-label="Salva a Localização Atual como a Localização da sua Casa"
         >
           <i class="fas fa-bookmark"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
         <button
           id="unit"
@@ -88,7 +90,7 @@
           aria-label="Alternar entre Celsius(Metrica) e Fahrenheit(Imperial)"
         >
           <i class="fas fa-thermometer-half"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
         <button
           id="refresh"
@@ -97,7 +99,7 @@
           aria-label="Recarrega as Condições de Tempo Atuais"
         >
           <i class="fas fa-sync-alt"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
       </nav>
       <hr />
@@ -107,7 +109,7 @@
         role="region"
         aria-labelledby="dailyForecast__title"
       >
-        <h2 id="dailyForecast__title" class="dailyForecast__title">Previsão de 6 Dias</h2>
+        <h2 id="dailyForecast__title" class="dailyForecast__title offscreen">Previsão de 6 Dias</h2>
         <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
       </section>
       <p id="confirmation" class="offscreen" aria-live="assertive"></p>
